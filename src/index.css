@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Signika:wght@300;400;500;700&display=swap");
+
+body {
+   font-family: "Signika", sans-serif;
+}
+
+.task-manager-head {
+   font-family: "Fredericka the Great", cursive;
+}
+
+@layer components {
+   .input {
+      @apply py-1.5 px-2 ring-2 ring-gray-400/90 rounded-sm outline-none focus:ring-gray-600 transition-all duration-150;
+   }
+   .button {
+      @apply bg-gray-600 hover:bg-gray-800 text-gray-100 py-1.5 px-5 rounded-sm transition-all duration-150;
+   }
+   .task-tab--list {
+      @apply rounded-sm border border-gray-300;
+   }
+   .task-tab--button {
+      @apply px-4 md:px-7 py-1;
+   }
+   .task-button--wrapper {
+      @apply w-5 h-5 flex items-center justify-center rounded-sm hover:bg-gray-300 cursor-pointer
+   }
+   .update-button--wrapper {
+      @apply w-5 h-5 flex items-center justify-center rounded-sm bg-gray-700 hover:bg-gray-900 cursor-pointer
+   }
+   .task-button--icon{
+      @apply text-gray-600 hover:text-gray-900
+   }
+   .update-button--icon{
+      @apply text-gray-100
+   }
+   .loading-circle{
+      @apply h-2.5 w-2.5 bg-gray-500 rounded-full
+   }
+   .total-task{
+      @apply w-full mt-5 flex items-center justify-center
+   }
+}
